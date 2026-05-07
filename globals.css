@@ -1,0 +1,141 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    color-scheme: dark;
+    font-family: 'Inter', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #020617 0%, #0f0620 50%, #020617 100%);
+    color: #f8fafc;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+::selection {
+    background: linear-gradient(135deg, rgba(147, 51, 234, 0.5), rgba(99, 102, 241, 0.5));
+    color: #ffffff;
+}
+
+button,
+input,
+textarea {
+    font: inherit;
+}
+
+.container {
+    max-width: 1120px;
+}
+
+#root,
+#__next {
+    min-height: 100vh;
+}
+
+/* Custom polish */
+.shadow-glow {
+    box-shadow: 0 30px 80px rgba(37, 99, 235, 0.14);
+}
+
+.glass {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.02), rgba(255, 255, 255, 0.03));
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(12px);
+    transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.glass:hover {
+    border-color: rgba(147, 51, 234, 0.3);
+    box-shadow: 0 20px 50px rgba(147, 51, 234, 0.15);
+}
+
+/* Smooth scrollbar for mac/linux */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(99, 102, 241, 0.35) transparent;
+}
+
+*::-webkit-scrollbar {
+    height: 10px;
+    width: 10px;
+}
+
+*::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, #60a5fa, #1d4ed8);
+    border-radius: 999px;
+}
+
+.fade-in {
+    animation: fadeIn 0.9s ease both;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(12px);
+    }
+
+    to {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+.card-hover {
+    transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.card-hover:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 30px 80px rgba(147, 51, 234, 0.2);
+}
+
+.btn-transition {
+    transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-transition::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s;
+}
+
+.btn-transition:hover::before {
+    left: 100%;
+}
+
+.text-gradient {
+    background: linear-gradient(135deg, #d946ef 0%, #3b82f6 50%, #00f0ff 100%);
+    background-size: 200% 200%;
+    animation: gradient-shift 8s ease infinite;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* Improve focus states */
+a:focus,
+button:focus,
+input:focus,
+textarea:focus {
+    outline: none;
+    box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.12);
+    border-color: rgba(59, 130, 246, 0.6);
+}

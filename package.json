@@ -1,0 +1,25 @@
+{
+    "name": "umair-zahir-portfolio",
+    "version": "1.0.0",
+    "private": true,
+    "scripts": {
+        "dev": "next dev",
+        "build": "next build",
+        "start": "next start"
+    },
+    "dependencies": {
+        "@react-three/drei": "^9.0.0",
+        "@react-three/fiber": "^8.0.0",
+        "framer-motion": "^11.0.0",
+        "gsap": "^3.13.0",
+        "next": "14.2.13",
+        "react": "18.3.1",
+        "react-dom": "18.3.1",
+        "three": "^0.168.0"
+    },
+    "devDependencies": {
+        "autoprefixer": "^10.4.20",
+        "postcss": "^8.4.35",
+        "tailwindcss": "^3.4.4"
+    }
+}
